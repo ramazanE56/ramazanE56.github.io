@@ -2221,7 +2221,6 @@ input, select, textarea {
 #main > section.dark {
     color: #ddd;
     color: rgba(255, 255, 255, 0.75);
-    border-bottom: rgba(255, 255, 255, 0); /* Fixed border-bottom */
 }
 
 #main > section.dark h2,
@@ -2243,14 +2242,17 @@ input, select, textarea {
 }
 
 #main > section.dark a:hover {
-    border-bottom: rgba(255, 255, 255, 0); /* Fixed border-bottom */
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+#main > section.dark {
+    border-bottom-color: rgba(255, 255, 255, 0);
 }
 
 #main > section.cover {
     padding: 10em 0;
     background-size: cover;
     background-position: center center;
-    z-index: 1; /* Added z-index */
 }
 
 #main > section.one {
@@ -2271,7 +2273,7 @@ input, select, textarea {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    z-index: 2; /* Added z-index */
+    z-index: 1;
 }
 
 #main > section.one::after {
@@ -2283,17 +2285,17 @@ input, select, textarea {
     background-image: url("../../images/banner.jpg");
     background-size: cover;
     background-position: center;
-    z-index: 1; /* Added z-index */
+    z-index: 0;
 }
 
 #main > section.one header {
-    z-index: 3; /* Adjust z-index for header */
+    z-index: 2; /* Adjust z-index for header */
 }
 
 #main > section.one h2,
 #main > section.one p {
     position: relative;
-    z-index: 4; /* Bring text to the front */
+    z-index: 3; /* Bring text to the front */
 }
 
 #main > section.two {
@@ -2310,11 +2312,8 @@ input, select, textarea {
 
 #main footer {
     position: relative;
-    z-index: 5; /* Adjust z-index for footer */
+    z-index: 2;
 }
-
-
-
 
 /* Wide */
 

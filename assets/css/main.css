@@ -2056,6 +2056,8 @@ input, select, textarea {
 		text-align: right;
 		top: 0;
 		width: 375px;
+		position: relative; /* Header'ı göreceli pozisyona getir */
+		z-index: 1; /* Header'ı diğer elementlerin üzerine getir */
 	}
 
 		#header .top {
@@ -2277,14 +2279,7 @@ input, select, textarea {
 						z-index: 0;
 					}
 
-			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/my.jpg"), url("../../images/banner.jpg");
-   				background-position: center center, center center;
-    			background-size: 200px auto, cover;
-    			background-repeat: no-repeat;
-			}
-
+		
 			#main > section.two {
 				background-color: #f5fafa;
 			}

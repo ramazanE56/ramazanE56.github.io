@@ -2056,8 +2056,7 @@ input, select, textarea {
 		text-align: right;
 		top: 0;
 		width: 375px;
-		position: relative; /* Header'ı göreceli pozisyona getir */
-		z-index: 1; /* Header'ı diğer elementlerin üzerine getir */
+		
 	}
 
 		#header .top {

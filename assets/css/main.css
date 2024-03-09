@@ -2283,8 +2283,7 @@ input, select, textarea {
 	background-image: url("../../images/banner.jpg");
 	background-size: cover;
 	background-position: center;
-	z-index: 0;ition: center;
-    z-index: 0;
+	z-index: 0;
 }
 
 #main > section.two {

@@ -716,85 +716,59 @@
 		}
 	}
 
-/* Main */
+// Main
 
-	#main {
-		margin-left: 375px;
-
-		> section {
-			margin: 0;
-			overflow: hidden;
-			padding: 4em 0;
-			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
-			text-align: center;
-			background-image: url('images/overlay.png');
-
-			&.dark {
-				color: #ddd;
-				color: rgba(255, 255, 255, 0.75);
-
-				h2, h3, h4, h5, h6 {
-					color: inherit;
-				}
-
-				strong {
-					color: #fff;
-					border-color: inherit;
-				}
-
-				a {
-					color: #fff;
-					border-color: inherit;
-
-					&:hover {
-						border-bottom-color: rgba(255, 255, 255, 0);
-					}
-				}
-			}
-
-			&.cover {
-				padding: 10em 0;
-				background-size: cover;
-				background-position: center center;
-			}
-
-			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/banner.jpg"), url("../../images/my.jpg");
-				background-repeat: no-repeat, no-repeat;
-				background-position: center center, center center;
-				background-size: cover, 200px;
-			
-				/* Additional Styles for Circular Frame */
-				&:before {
-					content: "";
-					display: block;
-					width: 200px;
-					height: 200px;
-					background: url("../../images/overlay.png"); /* Adjust the overlay image as needed */
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					border-radius: 50%;
-				}
-			}
-			
-
-			&.two {
-				background-color: #f5fafa;
-			}
-
-			&.three {
-				background-color: #ecf1f1;
-			}
-
-			&.four {
-				background-color: #e8edec;
-			}
-		}
+#main {
+	margin-left: 375px;
+  }
+  
+  #main > section {
+	margin: 0;
+	overflow: hidden;
+	padding: 4em 0;
+	box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+	text-align: center;
+	background-image: url("images/overlay.png");
+  }
+  
+  #main > section.one {
+	background-color: #81918E;
+	position: relative;
+  
+	.circle-frame {
+	  width: 200px;
+	  height: 200px;
+	  border-radius: 50%;
+	  overflow: hidden;
+	  margin: auto;
+  
+	  img {
+		width: 100%;
+		height: auto;
+	  }
 	}
-
+  
+	&:before,
+	&:after {
+	  content: '';
+	  position: absolute;
+	  top: -10px;
+	  bottom: -10px;
+	  left: -10px;
+	  right: -10px;
+	  border-radius: 50%;
+	  border: 10px solid #81918E;
+	}
+  
+	&:before {
+	  z-index: -1; /* Dairenin arkasına yerleştir */
+	}
+  
+	> .circle-frame {
+	  background-image: url("../../images/banner.jpg");
+	}
+  }
+  
 /* Wide */
 
 	@include breakpoint('wide') {

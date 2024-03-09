@@ -152,7 +152,7 @@
 		letter-spacing: -1px;
 
 		&.alt {
-			color: #888;
+			color: #ae04fd;
 
 			strong {
 				color: #666;
@@ -766,7 +766,7 @@
 				&::before {
 					content: "";
 					position: absolute;
-					top: 30%;
+					top: 10%;
 					left: 50%;
 					transform: translate(-50%, -50%);
 					width: 200px;

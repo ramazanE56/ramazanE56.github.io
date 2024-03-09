@@ -760,9 +760,7 @@
 	  border: 10px solid #81918E;
 	}
   
-	&:before {
-	  z-index: -1; /* Dairenin arkasına yerleştir */
-	}
+
   
 	> .circle-frame {
 	  background-image: url("../../images/banner.jpg");

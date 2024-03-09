@@ -758,9 +758,41 @@
 				background-position: center center;
 			}
 
-			&.one {
-				background-color: #81918E;
-				background-image: url('../../images/banner.jpg');
+			#main {
+				&.one {
+					background-color: #81918E;
+					position: relative;
+					overflow: hidden;
+			
+					&::before {
+						content: "";
+						position: absolute;
+						top: 20%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 200px;
+						height: 200px;
+						background-image: url("../../images/my.jpg");
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+						border-radius: 50%;
+						z-index: 1;
+					}
+			
+					&::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-image: url("../../images/banner.jpg");
+						background-size: cover;
+						background-position: center;
+						z-index: 0;
+					}
+				}
 			}
 
 			&.two {

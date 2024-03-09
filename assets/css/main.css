@@ -2235,8 +2235,8 @@ input, select, textarea {
 	height: auto;
   }
   
-  #main > section.one:before,
-  #main > section.one:after {
+  #main section.one:before
+   #main section.one:after {
 	content: '';
 	position: absolute;
 	top: -10px;
@@ -2247,9 +2247,6 @@ input, select, textarea {
 	border: 10px solid #81918E;
   }
   
-  #main > section.one:before {
-	z-index: -1; /* Dairenin arkasına yerleştir */
-  }
   
   #main > section.one > .circle-frame {
 	background-image: url("../../images/banner.jpg");

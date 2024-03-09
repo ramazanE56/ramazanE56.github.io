@@ -758,10 +758,28 @@
 				background-position: center center;
 			}
 
-			&.one {
+			#main > section.one {
 				background-color: #81918E;
-				background-image: url('../../images/banner.jpg');
+				background-image: url("../../images/banner.jpg"), url("../../images/my.jpg");
+				background-repeat: no-repeat, no-repeat;
+				background-position: center center, center center;
+				background-size: cover, 200px;
+			
+				/* Additional Styles for Circular Frame */
+				&:before {
+					content: "";
+					display: block;
+					width: 200px;
+					height: 200px;
+					background: url("../../images/overlay.png"); /* Adjust the overlay image as needed */
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					border-radius: 50%;
+				}
 			}
+			
 
 			&.two {
 				background-color: #f5fafa;

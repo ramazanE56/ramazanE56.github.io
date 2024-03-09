@@ -792,6 +792,15 @@
                 background-position: center;
                 z-index: 0;
             }
+
+            header {
+                z-index: 2; /* Adjust z-index for header */
+            }
+
+            h2, p {
+                position: relative;
+                z-index: 3; /* Bring text to the front */
+            }
         }
 
         &.two {
@@ -806,12 +815,13 @@
             background-color: #e8edec;
         }
 
-        header, footer {
+        footer {
             position: relative;
             z-index: 2;
         }
     }
 }
+
 
 
 

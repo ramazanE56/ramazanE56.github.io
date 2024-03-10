@@ -2306,7 +2306,7 @@ input, select, textarea {
 					display: flex;
 					flex-direction: column;
 					justify-content: flex-end;
-					height: 100vh; /* Ekran yüksekliğine bağlı olarak metni aşağı kaydırır */
+					height: 115vh; /* Ekran yüksekliğine bağlı olarak metni aşağı kaydırır */
 				}
 				
 				
